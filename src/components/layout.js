@@ -39,7 +39,8 @@ const Layout = ({ children }) => (
           }}
         >
           {children}
-          <Helmet>  <script>
+          <Helmet>  
+            <script>
               if (window.netlifyIdentity) {
                 window.netlifyIdentity.on("init", user => {
                   if (!user) {
@@ -47,7 +48,7 @@ const Layout = ({ children }) => (
                       document.location.href = "/admin/";
                     });
                   }
-                });
+                })
               }
             </script> 
           </Helmet>
